@@ -1,0 +1,17 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^https?://.+",
+  "name" : "HTTP and HTTPS",
+  "id" : 100,
+  "description" : "This service definition authorizes all application urls that support HTTP or HTTPS protocols.",
+  "evaluationOrder" : 1,
+  "accessStrategy" : {
+    "@class" : "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "enabled" : true,
+    "ssoEnabled" : true
+  }
+  "proxyPolicy" : {
+    "@class" : "org.apereo.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
+    "pattern" : "^https://.*"
+  }
+}

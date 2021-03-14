@@ -1,0 +1,77 @@
+dn: dc=borelly,dc=net
+dc: borelly
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Borelly inc.
+
+dn: ou=people,dc=borelly,dc=net
+ou: people
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=group,dc=borelly,dc=net
+ou: group
+objectClass: top
+objectClass: organizationalUnit
+
+dn: uid=cb,ou=people,dc=borelly,dc=net
+uid: cb
+cn: cb
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+userPassword: {SSHA}sxrL6eRSDr62ogDaOVwYwSBbIOiH8UdT
+shadowLastChange: 14508
+loginShell: /bin/bash
+uidNumber: 1000
+gidNumber: 100
+homeDirectory: /home/cb
+gecos: Christophe BORELLY,,,
+
+dn: cn=users,ou=group,dc=borelly,dc=net
+objectClass: top
+objectClass: posixgroup
+gidnumber: 100
+memberuid: uid=cb,ou=people,dc=borelly,dc=net
+cn: users
+
+dn: uid=toto,ou=people,dc=borelly,dc=net
+uid: toto
+cn: toto
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+userPassword: {SSHA}or3GxoCPft7gzC+khtVZZ26iajBidznx
+shadowLastChange: 14508
+loginShell: /bin/bash
+uidNumber: 1001
+gidNumber: 1000
+homeDirectory: /home/toto
+gecos: Mr TOTO,,,
+
+dn: uid=titi,ou=people,dc=borelly,dc=net
+uid: titi
+cn: titi
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+userPassword: {SSHA}fkH7iC2hwsRZh/dkSAQ7FQEnULsDWYsW
+shadowLastChange: 14508
+loginShell: /bin/bash
+uidNumber: 1002
+gidNumber: 1000
+homeDirectory: /home/titi
+gecos: Mr TITI,,,
+
+
+dn: cn=rt1,ou=group,dc=borelly,dc=net
+objectClass: top
+objectClass: posixgroup
+gidnumber: 1000
+memberuid: uid=toto,ou=people,dc=borelly,dc=net
+memberuid: uid=titi,ou=people,dc=borelly,dc=net
+cn: rt1
